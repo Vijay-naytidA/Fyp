@@ -1,12 +1,12 @@
 # HRSID dataset YAML for YOLOv8/YOLOv11 training
 
-path: /content/drive/MyDrive/ultralytics/Oriented_dataset_fyp   # Change if your dataset path is different
+path: /content/drive/MyDrive/ultralytics/Oriented_dataset_fyp # Change if your dataset path is different
 
-train: images/train        # relative to 'path'
+train: images/train # relative to 'path'
 test: images/test
 val: images/val
 # Number of classes
 nc: 1
 
 # Class names
-names: ['ship']
+names: ["ship"]
