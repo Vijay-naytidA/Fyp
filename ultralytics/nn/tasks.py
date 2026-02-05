@@ -10,6 +10,14 @@ from pathlib import Path
 import torch
 import torch.nn as nn
 
+
+from ultralytics.nn.modules.ACmix import C2PSA_ACmix
+
+# force registration for YAML parser
+globals()["C2PSA_ACmix"] = C2PSA_ACmix
+print("C2PSA_ACmix in globals:", "C2PSA_ACmix" in globals())
+
+
 from ultralytics.nn.autobackend import check_class_names
 from ultralytics.nn.modules import (
     AIFI,
@@ -1576,6 +1584,7 @@ def parse_model(d, ch, verbose=True):
             SPPF,
             C2fPSA,
             C2PSA,
+            C2PSA_ACmix,
             DWConv,
             Focus,
             BottleneckCSP,
@@ -1618,6 +1627,7 @@ def parse_model(d, ch, verbose=True):
             C2fPSA,
             C2fCIB,
             C2PSA,
+            C2PSA_ACmix,
             A2C2f,
         }
     )

@@ -16,6 +16,9 @@ Examples:
     >>> torch.onnx.export(m, x, f)
     >>> subprocess.run(f"onnxslim {f} {f} && open {f}", shell=True, check=True)  # pip install onnxslim
 """
+from .ACmix import C2PSA_ACmix
+
+
 
 from .block import (
     C1,
@@ -111,6 +114,7 @@ __all__ = (
     "C1",
     "C2",
     "C2PSA",
+    "C2PSA_ACmix",
     "C3",
     "C3TR",
     "CBAM",
