@@ -1,0 +1,12 @@
+# HRSID dataset YAML for YOLOv8/YOLOv11 training
+
+path: /content/HRSID_dataset   # Change if your dataset path is different
+
+train: images/train        # relative to 'path'
+test: images/test
+
+# Number of classes
+nc: 1
+
+# Class names
+names: ['ship']
